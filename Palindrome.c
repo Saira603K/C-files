@@ -10,13 +10,15 @@ int main() {
 
     printf("Enter a string: ");
     scanf("%s", str);
-
+    //strlen(0 method is used to get the length of the string and 
+    //then a looop is used to copy the string in reverse order
+    //and store in rev array
     int len = strlen(str);
     for (int i = 0; i < len; i++) {
         rev[i] = str[len - i - 1];
     }
     rev[len] = '\0';
-
+    //strcmp() method is used to compare the reversed string with the original
     if (strcmp(str, rev) == 0) {
         printf("%s is a palindrome\n", str);
     } else {
